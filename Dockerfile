@@ -1,8 +1,11 @@
 FROM php:8.2-fpm
 
-# Installer dépendances système et extensions PHP nécessaires
+# Installer dépendances système nécessaires
 RUN apt-get update && apt-get install -y \
-    libpq-dev zip unzip git curl \
+    apt-utils \
+    build-essential \
+    libpq-dev \
+    zip unzip git curl \
     && docker-php-ext-install pdo pdo_pgsql mbstring bcmath
 
 # Installer Composer
