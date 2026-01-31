@@ -1,26 +1,27 @@
 FROM php:8.2-fpm
 
-# Installer dépendances système nécessaires
+# Dépendances système
 RUN apt-get update && apt-get install -y \
-    apt-utils \
-    build-essential \
+    git curl zip unzip \
     libpq-dev \
-    zip unzip git curl \
-    && docker-php-ext-install pdo pdo_pgsql mbstring bcmath
+    && docker-php-ext-install pdo pdo_pgsql bcmath
 
-# Installer Composer
+# Composer
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
 WORKDIR /var/www/html
+
 COPY . .
 
-# Installer dépendances Laravel
-RUN composer install --no-dev --optimize-autoloader --no-interaction --prefer-dist
+# Permissions Laravel
+RUN chown -R www-data:www-data storage bootstrap/cache
 
-# Optimiser Laravel
-RUN php artisan config:cache && \
-    php artisan route:cache && \
-    php artisan view:cache
+# Installer dépendances
+RUN composer install \
+    --no-dev \
+    --optimize-autoloader \
+    --no-interaction
 
 EXPOSE 80
-CMD php artisan serve --host=0.0.0.0 --port=80
+
+CMD ["php", "-S", "0.0.0.0:80", "-t", "public"]
