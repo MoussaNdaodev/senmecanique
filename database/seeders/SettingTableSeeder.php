@@ -19,7 +19,7 @@ class SettingTableSeeder extends Seeder
             'logo' => "logo.jpg",
             'address' => "Pikine Rue 10 - Dakar - Sénégal",
             'email' => "senmecanique@gmail.sn",
-            'phone' => "+221 78 175 11 21 / +221 78 585 17 97 ",
+            'phone' => "+221 78 175 11 21",
         );
         DB::table('settings')->insert($data);
     }

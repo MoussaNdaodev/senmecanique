@@ -62,10 +62,9 @@
 							<!-- End Single Widget -->
 							{{-- <div class="sharethis-inline-follow-buttons"></div> --}}
                             <div class="row">
-                                <a href="https://www.instagram.com/" target="blank" class="mx-3 my-3"> <i class="bi bi-instagram fa-lg"></i></a>
-                                <a href="https://x.com/Accueil" target="blank" class="mx-3 my-3"> <i class="bi bi-twitter-x fa-lg"></i></a>
-                                <a href="https://web.whatsapp.com/" target="blank" class="mx-3 my-3"> <i class="bi bi-whatsapp fa-lg text-success"></i></a>
-                                <a href="https://fr-fr.facebook.com/" target="blank" class="mx-3 my-3"> <i class="bi bi-facebook fa-lg text-primary"></i></a>
+                                <a href="https://www.instagram.com/ndaomoussa23?igsh=YmF6M2wzNTR6ejhv" target="blank" class="mx-3 my-3"> <i class="bi bi-instagram fa-lg text-danger"></i></a>
+                                <a href="https://www.linkedin.com/in/moussa-ndao-61b1222b7" target="blank" class="mx-3 my-3"> <i class="bi bi-linkedin fa-lg text-primary"></i></a>
+                                <a href="https://wa.me/221781751121" target="blank" class="mx-3 my-3"> <i class="bi bi-whatsapp fa-lg text-success"></i></a>
                             </div>
 						</div>
 						<!-- End Single Widget -->
@@ -80,7 +79,7 @@
 					<div class="row">
 						<div class="col-lg-6 col-12">
 							<div class="left">
-								<p>Copyright © {{date('Y')}} <a href="#" >Sen Mecanique</a>  -  All Rights Reserved.</p>
+								<p>Copyright © {{date('Y')}} <a href="#" >Moussa Ndao</a>  -  All Rights Reserved.</p>
 							</div>
 						</div>
 						<div class="col-lg-6 col-12">

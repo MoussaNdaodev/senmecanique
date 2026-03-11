@@ -22,6 +22,7 @@
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
+        "laravel/boost": "^1.8",
         "laravel/pint": "^1.0",
         "laravel/sail": "^1.18",
         "mockery/mockery": "^1.4.4",
@@ -37,7 +38,7 @@
             "Touhidurabir\\Filterable\\": "packages/laravel-filterable/src/"
         },
         "files": [
-        "app/Http/Helpers.php"
+        "app/Http/Helper.php"
     ]
     },
     "autoload-dev": {
@@ -45,7 +46,7 @@
             "Tests\\": "tests/"
         },
         "files":[
-            "app/Http/Helpers.php"
+            "app/Http/Helper.php"
         ]
     },
     "scripts": {
@@ -82,6 +83,3 @@
     "minimum-stability": "stable",
     "prefer-stable": true
 }
-
-
-
